@@ -15,6 +15,7 @@ export const img: Record<string, string> = {
   "about-value-3": "/images/about-value-3.png",
   "about-value-2": "/images/about-value-2.png",
   "about-value-1": "/images/about-value-1.png",
+  "about-hero": "/images/about-hero.png",
   "about-cta-glasses": "/images/about-cta-glasses.png",
   "pai-icon-work-objective": "/images/pai-icon-work-objective.svg",
   "pai-icon-ruler": "/images/pai-icon-ruler.svg",
@@ -85,4 +86,7 @@ export const img: Record<string, string> = {
   "detail5-related-thumb": "/images/detail5-related-thumb.png",
   "detail5-photo-1": "/images/detail5-photo-1.png",
   "detail5-photo-2": "/images/detail5-photo-2.png",
+  "mf-report-bg": "/images/mf-report-bg.png",
+  "mf-platform": "/images/mf-platform.png",
+  "hc-challenge": "/images/hc-challenge.png",
 };

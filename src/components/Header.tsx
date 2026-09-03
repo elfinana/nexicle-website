@@ -18,6 +18,14 @@ const navGroups = [
       { to: "/updates", label: "Updates" },
     ],
   },
+  {
+    label: "Use Cases",
+    items: [
+      { to: "/healthcare", label: "Digital Healthcare" },
+      { to: "/defense", label: "Defense" },
+      { to: "/manufacturing", label: "Manufacturing" },
+    ],
+  },
 ];
 
 export default function Header() {
@@ -27,7 +35,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setMobileOpen(false)}>
+        <Link
+          to="/"
+          className="flex items-center gap-2 shrink-0"
+          onClick={() => setMobileOpen(false)}
+        >
           <img src={img["logo-nexicle"]} alt="Nexicle" className="h-8 w-auto" />
         </Link>
 
@@ -42,7 +54,12 @@ export default function Header() {
               <button className="py-2 hover:text-[#362FFA] transition-colors flex items-center gap-1">
                 {group.label}
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </button>
               {openMenu === group.label && (
@@ -66,13 +83,12 @@ export default function Header() {
               )}
             </div>
           ))}
-          <NavLink to="/#use-cases" className="py-2 hover:text-[#362FFA]">
-            Use Cases
-          </NavLink>
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <button className="font-bold text-base text-black hover:text-[#362FFA]">Login</button>
+          <button className="font-bold text-base text-black hover:text-[#362FFA]">
+            Login
+          </button>
           <Link
             to="/contact"
             className="bg-gray-100 hover:bg-gray-200 transition-colors rounded-full px-5 py-3 font-bold text-sm"
@@ -82,8 +98,19 @@ export default function Header() {
           <span className="font-bold text-sm text-gray-500">EN</span>
         </div>
 
-        <button className="lg:hidden p-2" aria-label="Toggle menu" onClick={() => setMobileOpen((v) => !v)}>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2">
+        <button
+          className="lg:hidden p-2"
+          aria-label="Toggle menu"
+          onClick={() => setMobileOpen((v) => !v)}
+        >
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="black"
+            strokeWidth="2"
+          >
             {mobileOpen ? (
               <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
             ) : (
@@ -97,7 +124,9 @@ export default function Header() {
         <div className="lg:hidden border-t border-gray-200 bg-white px-6 py-4 space-y-4">
           {navGroups.map((group) => (
             <div key={group.label}>
-              <div className="font-bold text-sm text-gray-500 mb-2">{group.label}</div>
+              <div className="font-bold text-sm text-gray-500 mb-2">
+                {group.label}
+              </div>
               <div className="space-y-1 pl-2">
                 {group.items.map((item) => (
                   <Link
@@ -112,10 +141,18 @@ export default function Header() {
               </div>
             </div>
           ))}
-          <Link to="/#use-cases" className="block py-2 font-bold text-black" onClick={() => setMobileOpen(false)}>
+          <Link
+            to="/#use-cases"
+            className="block py-2 font-bold text-black"
+            onClick={() => setMobileOpen(false)}
+          >
             Use Cases
           </Link>
-          <Link to="/contact" className="block py-2 font-bold text-[#362FFA]" onClick={() => setMobileOpen(false)}>
+          <Link
+            to="/contact"
+            className="block py-2 font-bold text-[#362FFA]"
+            onClick={() => setMobileOpen(false)}
+          >
             Contact Us
           </Link>
         </div>
