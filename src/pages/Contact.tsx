@@ -30,11 +30,11 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block font-medium text-black mb-2">First Name</label>
-                  <input required className="w-full rounded-2xl border border-gray-300 px-4 py-3" placeholder="" />
+                  <input required className="w-full rounded-2xl border border-gray-300 px-4 py-3" placeholder="Enter your First Name" />
                 </div>
                 <div>
                   <label className="block font-medium text-black mb-2">Last Name</label>
-                  <input required className="w-full rounded-2xl border border-gray-300 px-4 py-3" placeholder="" />
+                  <input required className="w-full rounded-2xl border border-gray-300 px-4 py-3" placeholder="Enter your Last Name" />
                 </div>
                 <div>
                   <label className="block font-medium text-black mb-2">Email</label>
@@ -70,11 +70,20 @@ export default function Contact() {
                 <p className="font-bold text-black mb-1">Phone</p>
                 <p className="text-gray-600">+82 010-4174-9546</p>
               </div>
-              <div>
+ <div>
                 <p className="font-bold text-black mb-1">Office</p>
-                <p className="text-gray-600">서울특별시 도봉구 마들로 13길 84, 창동 아우르네 211호</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%8F%84%EB%B4%89%EA%B5%AC%20%EB%A7%88%EB%93%A4%EB%A1%9C%2013%EA%B8%B8%2084%2C%20%EC%B0%BD%EB%8F%99%20%EC%95%84%EC%9A%B0%EB%A5%B4%EB%84%A4%20211%ED%98%B8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                 className="text-gray-600 underline underline-offset-2 hover:text-[#362FFA] transition-colors"
+>
+                  서울특별시 도봉구 마들로 13길 84, 창동 아우르네 211호
+                </a>
               </div>
-            </div>
+              </div>
+
+              
           </div>
         </div>
       </section>

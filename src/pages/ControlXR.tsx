@@ -67,35 +67,35 @@ export default function ControlXR() {
         </p>
       </section>
 
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-5xl mx-auto px-6 md:px-10">
-          <p className="text-[#362FFA] font-semibold tracking-wide text-center mb-16">
-            CORE CAPABILITIES
-          </p>
-          <div className="space-y-16">
-            {capabilities.map((c, i) => (
-              <div
-                key={c.title}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-              >
-                <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <h3 className="text-2xl font-bold text-black mb-3">
-                    {c.title}
-                  </h3>
-                  <p className="text-gray-500 text-lg">{c.desc}</p>
-                </div>
-                <div
-                  className={`bg-white rounded-2xl border border-gray-200 overflow-hidden ${
-                    i % 2 === 1 ? "md:order-1" : ""
-                  }`}
-                >
-                  <img src={img[c.image]} alt="" className="w-full h-auto" />
-                </div>
-              </div>
-            ))}
+   <section className="bg-gray-50 py-16">
+  <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <p className="text-[#362FFA] font-semibold tracking-wide text-center mb-16">
+      CORE CAPABILITIES
+    </p>
+    <div className="space-y-16">
+      {capabilities.map((c, i) => (
+        <div
+          key={c.title}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        >
+          <div className={i % 2 === 1 ? "md:order-2" : ""}>
+            <h3 className="text-2xl font-bold text-black mb-3">
+              {c.title}
+            </h3>
+            <p className="text-gray-500 text-lg">{c.desc}</p>
+          </div>
+          <div
+            className={`bg-white rounded-2xl border border-gray-200 overflow-hidden ${
+              i % 2 === 1 ? "md:order-1" : ""
+            }`}
+          >
+            <img src={img[c.image]} alt="" className="w-full h-auto" />
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <CTABanner image="cxr-cta-glasses" />
     </div>

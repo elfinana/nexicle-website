@@ -171,56 +171,56 @@ export default function Manufacturing() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
-          <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
-            EVALUATION REPORT
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
-            Manufacturing Work Report
-          </h2>
-          <p className="text-gray-600 mb-8">
-            객관적인 데이터와 AI 분석을 기반으로 훈련/임무 수행 결과를
-            종합적으로 제공합니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="bg-white rounded-2xl p-8">
-              <img
-                src={img["mf-report-bg"]}
-                alt=""
-                className="w-full rounded-xl border border-gray-200"
-              />
-            </div>
-            <div className="space-y-8">
-              {[
-                {
-                  title: "작업 단계별 수행 분석",
-                  desc: "조립 및 작업 절차를 단계별로 분석하여 각 공정의 수행 결과를 확인합니다.",
-                },
-                {
-                  title: "작업 시간 분석",
-                  desc: "각 작업 단계의 수행 시간과 평균 시간을 비교하여 작업 효율을 분석합니다.",
-                },
-                {
-                  title: "생산 결과 및 이상 이벤트",
-                  desc: "생산 수량과 작업 과정에서 발생한 Critical Event를 함께 확인합니다.",
-                },
-                {
-                  title: "AI 분석 결과",
-                  desc: "각 단계에서 발생한 결과와 원인을 분석하여 훈련 과정 전반을 평가합니다.",
-                },
-              ].map((item) => (
-                <div key={item.title}>
-                  <h3 className="font-bold text-black text-lg mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+<section className="bg-gray-50 py-16">
+  <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
+      EVALUATION REPORT
+    </p>
+    <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
+      Manufacturing Work Report
+    </h2>
+    <p className="text-gray-600 mb-8">
+      객관적인 데이터와 AI 분석을 기반으로 훈련/임무 수행 결과를
+      종합적으로 제공합니다.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+      <div className="md:col-span-4 bg-white rounded-2xl p-8">
+        <img
+          src={img["mf-report-bg"]}
+          alt=""
+          className="w-full rounded-xl border border-gray-200"
+        />
+      </div>
+      <div className="md:col-span-1 space-y-8">
+        {[
+          {
+            title: "작업 단계별 수행 분석",
+            desc: "조립 및 작업 절차를 단계별로 분석하여 각 공정의 수행 결과를 확인합니다.",
+          },
+          {
+            title: "작업 시간 분석",
+            desc: "각 작업 단계의 수행 시간과 평균 시간을 비교하여 작업 효율을 분석합니다.",
+          },
+          {
+            title: "생산 결과 및 이상 이벤트",
+            desc: "생산 수량과 작업 과정에서 발생한 Critical Event를 함께 확인합니다.",
+          },
+          {
+            title: "AI 분석 결과",
+            desc: "각 단계에서 발생한 결과와 원인을 분석하여 훈련 과정 전반을 평가합니다.",
+          },
+        ].map((item) => (
+          <div key={item.title}>
+            <h3 className="font-bold text-black text-lg mb-1">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 text-sm">{item.desc}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="bg-gray-50 py-16">
         <div className="max-w-5xl mx-auto px-6 md:px-10">

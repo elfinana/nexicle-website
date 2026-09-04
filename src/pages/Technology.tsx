@@ -252,37 +252,38 @@ export default function Technology() {
           </div>
         </div>
       </section>
-      <section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
-        <div className="border border-gray-200 rounded-2xl p-8 md:p-10">
-          <h2 className="text-2xl md:text-4xl font-bold text-black text-center mb-10">
-            How Procedure AI Works
-          </h2>
-          <div className="flex flex-wrap items-start justify-center gap-4">
-            {flow.map((f, i) => {
-              const Icon = [PlaySquare, Brain, Network, BarChart3, FileText][i];
-              return (
-                <div key={f.n} className="flex items-start gap-4">
-                  <div className="w-40 text-center">
-                    <Icon
-                      className="w-9 h-9 text-[#2f6fed] mx-auto mb-3"
-                      strokeWidth={1.8}
-                    />
-                    <p className="font-bold text-black">
-                      {f.n}. {f.title}
-                    </p>
-                    <p className="text-xs text-gray-500 mt-1 whitespace-pre-line">
-                      {f.desc}
-                    </p>
-                  </div>
-                  {i < flow.length - 1 && (
-                    <span className="text-gray-300 mt-4">→</span>
-                  )}
-                </div>
-              );
-            })}
+
+<section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
+  <div className="border border-gray-200 rounded-2xl p-8 md:p-10">
+    <h2 className="text-2xl md:text-4xl font-bold text-black text-center mb-10">
+      How Procedure AI Works
+    </h2>
+    <div className="flex flex-nowrap items-start justify-center gap-2 md:gap-4">
+      {flow.map((f, i) => {
+        const Icon = [PlaySquare, Brain, Network, BarChart3, FileText][i];
+        return (
+          <div key={f.n} className="flex items-start gap-2 md:gap-4 min-w-0">
+            <div className="w-20 sm:w-28 md:w-40 text-center">
+              <Icon
+                className="w-6 h-6 md:w-9 md:h-9 text-[#2f6fed] mx-auto mb-2 md:mb-3"
+                strokeWidth={1.8}
+              />
+              <p className="font-bold text-black text-xs md:text-base">
+                {f.n}. {f.title}
+              </p>
+              <p className="text-[9px] md:text-xs text-gray-500 mt-1 whitespace-pre-line">
+                {f.desc}
+              </p>
+            </div>
+            {i < flow.length - 1 && (
+              <span className="text-gray-300 mt-2 md:mt-4 text-xs md:text-base flex-shrink-0">→</span>
+            )}
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
       <section className="bg-gray-50 py-16">
         <div className="max-w-5xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>

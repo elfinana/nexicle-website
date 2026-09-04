@@ -107,7 +107,7 @@ export default function About() {
         />
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
+      {/* <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
         <h2 className="text-3xl md:text-5xl font-bold text-black text-center mb-4">
           Our Core Values
         </h2>
@@ -125,51 +125,51 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-black text-center mb-4">
-            Our Vision
-          </h2>
-          <p className="text-gray-600 text-center text-lg mb-14">
-            Becoming the standard for every industry and every procedure.
-            <br />
-            That is the future we envision.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {visions.map((v, i) => {
-              const Icon = [Brain, Cog, Bot][i];
-              return (
-                <div
-                  key={v.title}
-                  className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
-                >
-                  <div className="h-40 flex items-center justify-center">
-                    {i === 1 ? (
-                      <div className="w-14 h-14 rounded-full border border-dashed border-gray-300 flex items-center justify-center">
-                        <Icon
-                          className="w-6 h-6 text-gray-400"
-                          strokeWidth={1.5}
-                        />
-                      </div>
-                    ) : (
-                      <Icon
-                        className="w-12 h-12 text-gray-400"
-                        strokeWidth={1.5}
-                      />
-                    )}
-                  </div>
-                  <div className="bg-gray-100 p-6 text-left">
-                    <h3 className="font-semibold text-black mb-2">{v.title}</h3>
-                    <p className="text-gray-500 text-sm">{v.desc}</p>
-                  </div>
+<section className="bg-gray-50 py-20">
+  <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <h2 className="text-3xl md:text-5xl font-bold text-black text-center mb-4">
+      Our Vision
+    </h2>
+    <p className="text-gray-600 text-center text-lg mb-14">
+      Becoming the standard for every industry and every procedure.
+      <br />
+      That is the future we envision.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {visions.map((v, i) => {
+        const Icon = [Brain, Cog, Bot][i];
+        return (
+          <div
+            key={v.title}
+            className="bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col"
+          >
+            <div className="h-40 flex items-center justify-center">
+              {i === 1 ? (
+                <div className="w-14 h-14 rounded-full border border-dashed border-gray-300 flex items-center justify-center">
+                  <Icon
+                    className="w-6 h-6 text-gray-400"
+                    strokeWidth={1.5}
+                  />
                 </div>
-              );
-            })}
+              ) : (
+                <Icon
+                  className="w-12 h-12 text-gray-400"
+                  strokeWidth={1.5}
+                />
+              )}
+            </div>
+            <div className="bg-gray-100 p-6 text-left flex-1">
+              <h3 className="font-semibold text-black mb-2">{v.title}</h3>
+              <p className="text-gray-500 text-sm">{v.desc}</p>
+            </div>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       <CTABanner image="about-cta-glasses" />
     </div>

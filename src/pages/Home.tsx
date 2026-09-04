@@ -98,37 +98,78 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <img
-          src={heroImg}
-          alt=""
-          className="absolute inset-0 w-full h-full object-contain opacity-40"
-        />
-        <div className="relative max-w-5xl mx-auto px-6 md:px-10 py-24 md:py-36 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black">
-            AI that analyzes and evaluates real-world procedures.
-          </h1>
-        </div>
-      </section>
 
-      {/* Why Nexicle */}
-      <section className="max-w-5xl mx-auto px-6 md:px-10 py-20 text-center">
-        <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
-          WHY NEXICLE
-        </p>
-        <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-          When something goes wrong, the result alone doesn't tell you why.
-        </h2>
-        <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto">
-          Procedure AI analyzes users' first-person video to understand how they
-          actually perform a task and identify where problems occur.
-        </p>
-      </section>
-      <img
-        src={heroOverlay}
-        alt=""
-        className="mt-12 mx-auto max-w-2xl w-full opacity-90 rounded-2xl"
-      />
+
+{/* Hero */}
+<section className="relative overflow-hidden h-[80vh] min-h-[560px] bg-black">
+
+  <video
+    src="/videos/0904-3.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Left dark gradient for text readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/10 to-transparent" />
+
+  {/* Corner brackets (decorative, like the reference) */}
+  <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-[#4ADE80]/60" />
+  <div className="absolute top-6 right-6 w-10 h-10 border-t-2 border-r-2 border-[#4ADE80]/60" />
+
+  {/* Text content */}
+  <div className="relative h-full max-w-6xl  px-2 md:px-10 flex items-center">
+    <div className="max-w-md">
+      <p className="text-[#4ADE80] font-semibold tracking-widest text-sm mb-4">
+        PROCEDURE AI
+      </p>
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+        AI that understands
+        <br />
+        how work is performed.
+      </h1>
+      <p className="text-gray-300 text-base leading-relaxed">
+        From first-person video
+        <br />
+        to procedure understanding
+        <br />
+        and evaluation.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Why Nexicle */}
+<section className="max-w-6xl mx-auto px-6 md:px-10 py-20 text-center">
+  <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
+    WHY NEXICLE
+</p>
+  <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
+    When something goes wrong, the result alone doesn't tell you why.
+  </h2>
+  <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto mb-16">
+    Procedure AI analyzes users' first-person video to understand how they
+    actually perform a task and identify where problems occur.
+  </p>
+
+  <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+    <img
+      src={img["main-reason"]}
+      alt="Traditional evaluation result"
+      className="w-full max-w-[220px] rounded-2xl border border-gray-200 shadow-sm"
+    />
+    <p className="text-gray-400 font-medium text-lg whitespace-nowrap px-2">
+      What actually <br/>happened?
+    </p>
+    <img
+      src={img["main-report"]}
+      alt="Manufacturing Work Report"
+      className="w-full max-w-2xl rounded-2xl border border-gray-200 shadow-sm"
+    />
+  </div>
+</section>
 
       {/* How it works — radial hub-and-spoke layout */}
       <section className="max-w-3xl mx-auto px-6 md:px-10 py-20">

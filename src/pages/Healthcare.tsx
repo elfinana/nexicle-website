@@ -274,56 +274,56 @@ export default function Healthcare() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
-          <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
-            EVALUATION REPORT
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
-            Digital Healthcare Report
-          </h2>
-          <p className="text-gray-600 mb-8">
-            실제 수행 데이터를 기반으로 절차 준수 여부와 위험 요소를 정량적으로
-            평가합니다.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="bg-white rounded-2xl p-8">
-              <img
-                src={img["hc-report-bg"]}
-                alt=""
-                className="w-full rounded-xl border border-gray-200"
-              />
-            </div>
-            <div className="space-y-8">
-              {[
-                {
-                  title: "단계별 수행 분석",
-                  desc: "간호 절차를 단계별로 분석하여 각 단계의 수행 여부와 정확도를 확인합니다.",
-                },
-                {
-                  title: "수행 시간 분석",
-                  desc: "전체 수행 시간과 단계별 소요 시간을 비교하여 절차 수행의 흐름과 시간을 분석합니다.",
-                },
-                {
-                  title: "안전 이벤트 감지",
-                  desc: "수행 과정에서 발생한 안전 관련 행동과 누락된 절차를 감지하고 확인합니다.",
-                },
-                {
-                  title: "영상 기반 검토",
-                  desc: "실제 수행 영상을 기반으로 간호 절차가 진행된 과정을 다시 확인할 수 있습니다.",
-                },
-              ].map((item) => (
-                <div key={item.title}>
-                  <h3 className="font-bold text-black text-lg mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+<section className="bg-gray-50 py-16">
+  <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
+      EVALUATION REPORT
+    </p>
+    <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
+      Digital Healthcare Report
+    </h2>
+    <p className="text-gray-600 mb-8">
+      실제 수행 데이터를 기반으로 절차 준수 여부와 위험 요소를 정량적으로
+      평가합니다.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+      <div className="md:col-span-4 bg-white rounded-2xl p-8">
+        <img
+          src={img["hc-report-bg"]}
+          alt=""
+          className="w-full rounded-xl border border-gray-200"
+        />
+      </div>
+      <div className="md:col-span-1 space-y-8">
+        {[
+          {
+            title: "단계별 수행 분석",
+            desc: "간호 절차를 단계별로 분석하여 각 단계의 수행 여부와 정확도를 확인합니다.",
+          },
+          {
+            title: "수행 시간 분석",
+            desc: "전체 수행 시간과 단계별 소요 시간을 비교하여 절차 수행의 흐름과 시간을 분석합니다.",
+          },
+          {
+            title: "안전 이벤트 감지",
+            desc: "수행 과정에서 발생한 안전 관련 행동과 누락된 절차를 감지하고 확인합니다.",
+          },
+          {
+            title: "영상 기반 검토",
+            desc: "실제 수행 영상을 기반으로 간호 절차가 진행된 과정을 다시 확인할 수 있습니다.",
+          },
+        ].map((item) => (
+          <div key={item.title}>
+            <h3 className="font-bold text-black text-lg mb-1">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 text-sm">{item.desc}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <CTABanner image="hc-cta-glasses" />
     </div>

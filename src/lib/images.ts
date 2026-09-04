@@ -89,4 +89,10 @@ export const img: Record<string, string> = {
   "mf-report-bg": "/images/mf-report-bg.png",
   "mf-platform": "/images/mf-platform.png",
   "hc-challenge": "/images/hc-challenge.png",
+  "output-timeline": "/images/output-timeline.png",
+"output-replay": "/images/output-replay.png",
+"output-reasoning": "/images/output-reasoning.png",
+"output-cl": "/images/output-cl.png",
+"main-reason": "/images/main-reason.png",
+"main-report": "/images/main-report.png",
 };

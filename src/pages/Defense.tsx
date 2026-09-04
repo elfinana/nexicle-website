@@ -164,54 +164,56 @@ export default function Defense() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
-        <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
-          EVALUATION REPORT
-        </p>
-        <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
-          Defense Training Report
-        </h2>
-        <p className="text-gray-600 mb-8">
-          객관적인 데이터와 AI 분석을 기반으로 훈련/임무 수행 결과를 종합적으로
-          제공합니다.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <img
-              src={img["def-report-photo"]}
-              alt=""
-              className="w-full rounded-xl border border-gray-200"
-            />
+<section className="bg-gray-50 py-16">
+  <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <p className="text-[#362FFA] font-semibold tracking-wide mb-4">
+      EVALUATION REPORT
+    </p>
+    <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
+      Defense Training Report
+    </h2>
+    <p className="text-gray-600 mb-8">
+      객관적인 데이터와 AI 분석을 기반으로 훈련/임무 수행 결과를 종합적으로
+      제공합니다.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+      <div className="md:col-span-4 bg-gray-50 rounded-2xl p-8">
+        <img
+          src={img["def-report-photo"]}
+          alt=""
+          className="w-full rounded-xl border border-gray-200"
+        />
+      </div>
+      <div className="md:col-span-1 space-y-8">
+        {[
+          {
+            title: "전술 단계별 수행 분석",
+            desc: "훈련 절차를 단계별로 분석하여 각 행동의 수행 결과를 확인합니다.",
+          },
+          {
+            title: "이동 경로 및 위치 분석",
+            desc: "실제 이동 경로와 체크포인트를 기반으로 훈련 경로의 정확도를 분석합니다.",
+          },
+          {
+            title: "영상 기반 검토",
+            desc: "훈련 당시의 실제 영상을 통해 각 상황과 수행 과정을 다시 확인합니다.",
+          },
+          {
+            title: "AI 분석 결과",
+            desc: "각 단계에서 발생한 결과와 원인을 분석하여 훈련 과정 전반을 평가합니다.",
+          },
+        ].map((item) => (
+          <div key={item.title}>
+            <h3 className="font-bold text-black text-lg mb-1">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 text-sm">{item.desc}</p>
           </div>
-          <div className="space-y-8">
-            {[
-              {
-                title: "전술 단계별 수행 분석",
-                desc: "훈련 절차를 단계별로 분석하여 각 행동의 수행 결과를 확인합니다.",
-              },
-              {
-                title: "이동 경로 및 위치 분석",
-                desc: "실제 이동 경로와 체크포인트를 기반으로 훈련 경로의 정확도를 분석합니다.",
-              },
-              {
-                title: "영상 기반 검토",
-                desc: "훈련 당시의 실제 영상을 통해 각 상황과 수행 과정을 다시 확인합니다.",
-              },
-              {
-                title: "AI 분석 결과",
-                desc: "각 단계에서 발생한 결과와 원인을 분석하여 훈련 과정 전반을 평가합니다.",
-              },
-            ].map((item) => (
-              <div key={item.title}>
-                <h3 className="font-bold text-black text-lg mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <CTABanner image="def-cta-glasses" />
     </div>

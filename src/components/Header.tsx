@@ -86,9 +86,13 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <button className="font-bold text-base text-black hover:text-[#362FFA]">
+          <a 
+            href="https://dev.controlxr.ai/auth/login"
+              target="_blank"
+                rel="noopener noreferrer"
+          className="font-bold text-base text-black hover:text-[#362FFA]" >
             Login
-          </button>
+          </a>
           <Link
             to="/contact"
             className="bg-gray-100 hover:bg-gray-200 transition-colors rounded-full px-5 py-3 font-bold text-sm"

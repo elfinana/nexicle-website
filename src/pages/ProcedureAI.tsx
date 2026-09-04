@@ -149,47 +149,70 @@ export default function ProcedureAI() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
-        <p className="text-[#362FFA] font-semibold tracking-wide text-center mb-4">
-          OUTPUT
-        </p>
-        <h2 className="text-3xl md:text-5xl font-bold text-black text-center mb-10">
-          Clear results, backed by evidence
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-          {outputs.map((o) =>
-            o.type === "stat" ? (
-              <div
-                key={o.title}
-                className="p-6 rounded-2xl border border-gray-200 text-left"
-              >
-                <h3 className="font-semibold text-black mb-4">{o.title}</h3>
-                <p className="text-4xl font-bold text-[#362FFA] mb-2">
-                  {o.value}
-                </p>
-                <p className="text-sm font-semibold text-black mb-4">
-                  {o.desc}
-                </p>
-                <p className="text-xs text-gray-400">{o.footnote}</p>
-              </div>
-            ) : (
-              <div
-                key={o.title}
-                className="p-6 rounded-2xl border border-gray-200 text-left"
-              >
-                {o.icon && (
-                  <o.icon
-                    className="w-6 h-6 text-[#362FFA] mb-3"
-                    strokeWidth={1.75}
-                  />
-                )}
-                <h3 className="font-semibold text-black mb-2">{o.title}</h3>
-                <p className="text-gray-500 text-sm">{o.desc}</p>
-              </div>
-            ),
-          )}
-        </div>
-      </section>
+<section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
+  <p className="text-[#362FFA] font-semibold tracking-wide text-center mb-4">OUTPUT</p>
+  <h2 className="text-3xl md:text-5xl font-bold text-black text-center mb-12">
+    Clear results, backed by evidence
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+    {/* AI Score */}
+    <div className="p-6 rounded-2xl border border-gray-200">
+      <h3 className="font-semibold text-black mb-4">AI score</h3>
+      <p className="mb-2">
+        <span className="text-lg font-bold text-[#362FFA]">up to </span>
+        <span className="text-5xl font-extrabold text-[#362FFA]">95%</span>
+      </p>
+      <p className="text-gray-700 text-sm font-medium mb-4">Action recognition accuracy</p>
+      <p className="text-xs text-gray-400">
+        * Based on Nexicle PoC / Nursing Skills – Oral Medication Model
+      </p>
+    </div>
+
+    {/* Timeline */}
+    <div className="p-6 rounded-2xl border border-gray-200">
+      <h3 className="font-semibold text-black mb-2">Timeline</h3>
+      <p className="text-gray-500 text-sm mb-4">See the entire procedure step by step.</p>
+      <img
+        src={img["output-timeline"]}
+        alt="Timeline"
+        className="w-full rounded-xl border border-gray-100"
+      />
+    </div>
+
+    {/* Replay */}
+    <div className="p-6 rounded-2xl border border-gray-200">
+      <h3 className="font-semibold text-black mb-2">Replay</h3>
+      <p className="text-gray-500 text-sm mb-4">Review the actual procedure video.</p>
+      <img
+        src={img["output-replay"]}
+        alt="Replay"
+        className="w-full rounded-xl border border-gray-100"
+      />
+    </div>
+
+    {/* Reasoning */}
+    <div className="p-6 rounded-2xl border border-gray-200">
+      <h3 className="font-semibold text-black mb-2">Reasoning</h3>
+      <p className="text-gray-500 text-sm mb-4">Understand why each decision was made.</p>
+      <img
+        src={img["output-reasoning"]}
+        alt="Reasoning"
+        className="w-full rounded-xl border border-gray-100"
+      />
+    </div>
+
+    {/* Checklist */}
+    <div className="p-6 rounded-2xl border border-gray-200">
+      <h3 className="font-semibold text-black mb-2">Checklist</h3>
+      <p className="text-gray-500 text-sm mb-4">Check SOP compliance at a glance.</p>
+      <img
+        src={img["output-cl"]}
+        alt="Checklist"
+        className="w-full rounded-xl border border-gray-100"
+      />
+    </div>
+  </div>
+</section>
 
       <section className="bg-gray-50 py-16">
         <div className="max-w-5xl mx-auto px-6 md:px-10">
