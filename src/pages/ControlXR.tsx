@@ -9,12 +9,12 @@ const capabilities = [
   },
   {
     title: "Effortless Device Management",
-    desc: "Remotely install and update up to 150 devices, and monitor and manage their status at a glance.",
+    desc: "Remotely deploy and update 1,000+ devices within a single organization.",
     image: "cxr-dashboard-2",
   },
   {
-    title: "Bidirectional communication",
-    desc: "Communicate with users and provide real-time guidance during a session.",
+    title: "User Control & Real-Time Communication",
+    desc: "Monitor user screens in real time and support screenshots, recording, remote control, and instant messaging.",
     image: "cxr-dashboard-3",
   },
   {
@@ -68,33 +68,27 @@ export default function ControlXR() {
       </section>
 
    <section className="bg-gray-50 py-16">
-  <div className="max-w-6xl mx-auto px-6 md:px-10">
-    <p className="text-[#362FFA] font-semibold tracking-wide text-center mb-16">
-      CORE CAPABILITIES
-    </p>
-    <div className="space-y-16">
-      {capabilities.map((c, i) => (
-        <div
-          key={c.title}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-        >
-          <div className={i % 2 === 1 ? "md:order-2" : ""}>
-            <h3 className="text-2xl font-bold text-black mb-3">
-              {c.title}
-            </h3>
-            <p className="text-gray-500 text-lg">{c.desc}</p>
-          </div>
-          <div
-            className={`bg-white rounded-2xl border border-gray-200 overflow-hidden ${
-              i % 2 === 1 ? "md:order-1" : ""
-            }`}
-          >
-            <img src={img[c.image]} alt="" className="w-full h-auto" />
-          </div>
+
+<div className="max-w-5xl mx-auto px-6 md:px-10">
+  <p className="text-[#362FFA] font-semibold tracking-wide text-center mb-16">
+    CORE CAPABILITIES
+  </p>
+  <div className="space-y-20">
+    {capabilities.map((c) => (
+      <div key={c.title} className="text-center">
+        <h3 className="text-2xl md:text-3xl font-bold text-black mb-3">
+          {c.title}
+        </h3>
+        <p className="text-gray-500 text-lg max-w-xl mx-auto mb-8">
+          {c.desc}
+        </p>
+        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+          <img src={img[c.image]} alt="" className="w-full h-auto" />
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </div>
+</div>
 </section>
 
       <CTABanner image="cxr-cta-glasses" />

@@ -268,9 +268,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 mt-20">
             {/* Column 1 */}
             <div className="py-8 md:py-0 md:px-6">
-              <span className="inline-block bg-[#dce6ff] text-[#362FFA] text-xs font-bold tracking-wide px-3 py-1 rounded-full mb-6">
-                ACCURACY YOU CAN TRUST
-              </span>
+             
               <p className="text-[#362FFA] font-extrabold leading-none mb-3">
                 <span className="text-3xl align-baseline">Up to </span>
                 <span className="text-6xl">95</span>
@@ -300,9 +298,7 @@ export default function Home() {
 
             {/* Column 2 */}
             <div className="py-8 md:py-0 md:px-6">
-              <span className="inline-block bg-[#dce6ff] text-[#362FFA] text-xs font-bold tracking-wide px-3 py-1 rounded-full mb-6">
-                FASTER THAN OTHERS
-              </span>
+           
               <p className="text-[#362FFA] font-extrabold text-6xl leading-none mb-3">
                 ≤3s
               </p>
@@ -321,9 +317,7 @@ export default function Home() {
 
             {/* Column 3 */}
             <div className="py-8 md:py-0 md:px-6">
-              <span className="inline-block bg-[#dce6ff] text-[#362FFA] text-xs font-bold tracking-wide px-3 py-1 rounded-full mb-6">
-                BUILT FOR SCALE
-              </span>
+          
               <p className="text-[#362FFA] font-extrabold text-6xl leading-none mb-3">
                 1,000+
               </p>

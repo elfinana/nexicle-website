@@ -6,8 +6,8 @@ const understands = [
   { title: "Action", desc: "What was done" },
   { title: "Sequence", desc: "Was the order correct" },
   { title: "Object", desc: "Was the right tool used" },
-  { title: "Attention", desc: "Where they were looking" },
-  { title: "Timing", desc: "Too fast or too slow" },
+  { title: "Repeated Action", desc: "Distinguishes identical actions by their position in the procedure." },
+  { title: "Quality Check", desc: "Verifies whether the action was performed correctly." },
   { title: "Compliance", desc: "Was the SOP followed" },
 ];
 
@@ -129,24 +129,18 @@ export default function ProcedureAI() {
         <p className="text-[#362FFA] font-semibold tracking-wide mb-10">
           AI EVALUATION FLOW
         </p>
-        <div className="flex flex-col items-center gap-2">
-          {flow.map((step, i) => (
-            <div key={step} className="flex flex-col items-center">
-              <span
-                className={`w-64 px-5 py-3 rounded-xl border text-sm md:text-base font-semibold ${
-                  i === 2
-                    ? "bg-[#89b8ff]/30 border-[#362FFA] text-black"
-                    : "bg-white border-gray-300 text-black"
-                }`}
-              >
-                {step}
-              </span>
-              {i < flow.length - 1 && (
-                <span className="text-gray-300 my-1">↓</span>
-              )}
-            </div>
-          ))}
-        </div>
+<div className="flex flex-col items-center gap-2">
+  {flow.map((step, i) => (
+    <div key={step} className="flex flex-col items-center">
+      <span className="w-64 px-5 py-3 rounded-xl border bg-white border-gray-300 text-black text-sm md:text-base font-semibold">
+        {step}
+      </span>
+      {i < flow.length - 1 && (
+        <span className="text-gray-300 my-1">↓</span>
+      )}
+    </div>
+  ))}
+</div>
       </section>
 
 <section className="max-w-6xl mx-auto px-6 md:px-10 py-16">
@@ -154,9 +148,9 @@ export default function ProcedureAI() {
   <h2 className="text-3xl md:text-5xl font-bold text-black text-center mb-12">
     Clear results, backed by evidence
   </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
     {/* AI Score */}
-    <div className="p-6 rounded-2xl border border-gray-200">
+    {/* <div className="p-6 rounded-2xl border border-gray-200">
       <h3 className="font-semibold text-black mb-4">AI score</h3>
       <p className="mb-2">
         <span className="text-lg font-bold text-[#362FFA]">up to </span>
@@ -164,9 +158,9 @@ export default function ProcedureAI() {
       </p>
       <p className="text-gray-700 text-sm font-medium mb-4">Action recognition accuracy</p>
       <p className="text-xs text-gray-400">
-        * Based on Nexicle PoC / Nursing Skills – Oral Medication Model
+      Based on internal validation using first-person procedural scenarios
       </p>
-    </div>
+    </div> */}
 
     {/* Timeline */}
     <div className="p-6 rounded-2xl border border-gray-200">

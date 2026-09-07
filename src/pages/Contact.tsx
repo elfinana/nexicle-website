@@ -78,7 +78,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                  className="text-gray-600 underline underline-offset-2 hover:text-[#362FFA] transition-colors"
 >
-                  서울특별시 도봉구 마들로 13길 84, 창동 아우르네 211호
+               211, Aureune B/D, 84, Madeul-ro 13-gil, Dobong-gu, Seoul, Republic of Korea
                 </a>
               </div>
               </div>

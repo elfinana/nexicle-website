@@ -8,11 +8,11 @@ export default function Footer() {
         <Link to="/" className="inline-block mb-6">
           <img src={img["logo-nexicle"]} alt="Nexicle" className="h-8 w-auto" />
         </Link>
-        <div className="text-sm text-gray-700 space-y-1">
-          <p>서울특별시 도봉구 마들로 13길 84, 창동 아우르네 211호</p>
-          <p>Tel 010-4174-9546</p>
-          <p>Email nexicle@nexicle.kr</p>
-        </div>
+      <div className="text-sm text-gray-700 space-y-1">
+  <p>211, Aureune B/D, 84, Madeul-ro 13-gil, Dobong-gu, Seoul, Republic of Korea</p>
+  <p>Tel +82 10-4174-9546</p>
+  <p>Email nexicle@nexicle.kr</p>
+</div>
         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-gray-500">
           <Link to="/about" className="hover:text-black">About Us</Link>
           <Link to="/procedure-ai" className="hover:text-black">Procedure AI</Link>
