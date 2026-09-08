@@ -290,8 +290,7 @@ export default function Home() {
                     internal testing
                   </span>
                   .
-                  <br />
-                  Continuously improving for real-world reliability.
+             
                 </p>
               </div>
             </div>

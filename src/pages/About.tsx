@@ -57,11 +57,7 @@ export default function About() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <img
-          src={img["about-hero"]}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+ 
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
         <div className="relative max-w-5xl mx-auto px-6 md:px-10 py-24 md:py-32">
           <div className="max-w-xl">
@@ -100,11 +96,7 @@ export default function About() {
             improved.
           </p>
         </div>
-        <img
-          src={img["about-vision-image"]}
-          alt=""
-          className="absolute right-0 bottom-0 translate-y-1/4 w-64 md:w-80 opacity-90 pointer-events-none"
-        />
+
       </section>
 
       {/* <section className="max-w-6xl mx-auto px-6 md:px-10 py-20">
